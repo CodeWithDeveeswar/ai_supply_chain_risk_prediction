@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="history-container">
+
+    <h2>Prediction History</h2>
+
+    <!-- CONTROLS -->
+    <div class="history-controls">
+
+        <!-- SEARCH -->
+        <input type="text" id="searchInput" placeholder="Search..." onkeyup="applyFilters()">
+
+        <!-- FILTER -->
+        <select id="filterRisk" onchange="applyFilters()">
+            <option value="">All Risk Levels</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+
+        <!-- EXPORT -->
+        <button onclick="exportToExcel()" class="export-btn">
+            Export Excel
+        </button>
+
+        <!-- DELETE -->
+        <button onclick="deleteAll()" class="delete-btn danger">
+            Delete All
+        </button>
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-container">
+        <table id="historyTable">
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Supplier</th>
+                    <th>Region</th>
+                    <th>Transport</th>
+                    <th>Delay</th>
+                    <th>Weather</th>
+                    <th>Inventory</th>
+                    <th>Order Value</th>
+                    <th>Risk</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {% for row in data %}
+                <tr>
+
+                    <td>{{ row.id }}</td>
+                    <td>{{ row.date }}</td>
+                    <td>{{ row.supplier }}</td>
+                    <td>
+                        {% if row.region == 0 %} Asia
+                        {% elif row.region == 1 %} Europe
+                        {% elif row.region == 2 %} North America
+                        {% elif row.region == 3 %} South America
+                        {% elif row.region == 4 %} Africa
+                        {% else %} Unknown
+                        {% endif %}
+                    </td>
+
+                    <td>
+                        {% if row.transport == 0 %} 🚚 Truck
+                        {% elif row.transport == 1 %} 🚆 Rail
+                        {% elif row.transport == 2 %} 🚢 Ship
+                        {% elif row.transport == 3 %} ✈ Air
+                        {% else %} Unknown
+                        {% endif %}
+                    </td>
+
+                    <td>{{ row.delay }}</td>
+
+                    <td>
+                        {% if row.weather == 0 %}
+                        ☀️ Clear
+                        {% elif row.weather == 1 %}
+                        🌧 Rain
+                        {% elif row.weather == 2 %}
+                        ⛈ Storm
+                        {% elif row.weather == 3 %}
+                        ❄️ Snow
+                        {% elif row.weather == 4 %}
+                        🌫 Fog
+                        {% else %}
+                        🌤 Unknown
+                        {% endif %}
+                    </td>
+
+                    <td>{{ row.inventory }}</td>
+                    <td>${{ "{:,.0f}".format(row.order_value) }}</td>
+
+                    <td>
+                        <span class="risk-badge
+                            {% if row.risk_level == 'High' %} risk-high
+                            {% elif row.risk_level == 'Medium' %} risk-medium
+                            {% else %} risk-low
+                            {% endif %}
+                        ">
+                            {{ row.risk_level }}
+                        </span>
+                    </td>
+
+                    <td>
+                        <button onclick="deleteSingle({{ row.id }})" class="delete-btn icon">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </td>
+
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="9" style="text-align:center; padding:20px;">
+                        No prediction history found
+                    </td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
+
+{% endblock %}

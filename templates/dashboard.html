@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="dashboard">
+
+    <!-- HEADER -->
+    <div class="dashboard-header">
+        <div class="header-left">
+            <h2>Dashboard</h2>
+            <p>Real-time supply chain insights and risk monitoring</p>
+        </div>
+    </div>
+
+    <!-- KPI CARDS -->
+    <div class="kpi-container">
+
+        <div class="kpi-card">
+            <h4>Total Predictions</h4>
+            <p id="totalPredictions">{{ total_predictions }}</p>
+        </div>
+
+        <div class="kpi-card">
+            <h4>Total Suppliers</h4>
+            <p id="totalSuppliers">{{ total_suppliers }}</p>
+        </div>
+
+        <div class="kpi-card">
+            <h4>High Risk Cases</h4>
+            <p id="highRisk">{{ high_risk }}</p>
+        </div>
+
+        <div class="kpi-card">
+            <h4>Medium Risk Cases</h4>
+            <p id="mediumRisk">{{ medium_risk }}</p>
+        </div>
+
+        <div class="kpi-card">
+            <h4>Low Risk Cases</h4>
+            <p id="lowRisk">{{ low_risk }}</p>
+        </div>
+
+        <div class="kpi-card">
+            <h4>Avg Delivery Delay</h4>
+            <p id="avgDelay">{{ avg_delay }} days</p>
+        </div>
+
+        <div class="kpi-card">
+            <h4>Total Order Value</h4>
+            <p id="totalValue">${{ total_value }}</p>
+        </div>
+
+        <div class="kpi-card">
+            <h4>Avg Fuel Cost</h4>
+            <p id="avgFuel">${{ avg_fuel }}</p>
+        </div>
+
+    </div>
+
+    <!-- CHART ROW 1 -->
+    <div class="chart-row">
+        <div class="chart-card">
+            <h4>Region Distribution</h4>
+            <canvas id="regionChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <h4>Transport Mode Usage</h4>
+            <canvas id="transportChart"></canvas>
+        </div>
+    </div>
+
+    <!-- CHART ROW 2 -->
+    <div class="chart-row">
+        <div class="chart-card">
+            <h4>Weather Impact on Risk</h4>
+            <canvas id="weatherChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <h4>Traffic vs Delay</h4>
+            <canvas id="trafficChart"></canvas>
+        </div>
+    </div>
+
+    <!-- CHART ROW 3 -->
+    <div class="chart-row">
+        <div class="chart-card">
+            <h4>Demand Level Distribution</h4>
+            <canvas id="demandChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <h4>Stock Status Analysis</h4>
+            <canvas id="stockChart"></canvas>
+        </div>
+    </div>
+
+    <!-- CHART ROW 4 -->
+    <div class="chart-row">
+        <div class="chart-card large">
+            <h4>Order Value Trend</h4>
+            <canvas id="valueChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <h4>Fuel Cost Impact</h4>
+            <canvas id="fuelChart"></canvas>
+        </div>
+    </div>
+
+    <!-- 🔥 INSIGHT TABLE -->
+    <div class="chart-card">
+        <h4>High Risk Suppliers</h4>
+
+        <table class="alert-table">
+            <thead>
+                <tr>
+                    <th>Supplier</th>
+                    <th>Region</th>
+                    <th>Delay</th>
+                    <th>Weather</th>
+                    <th>Risk</th>
+                </tr>
+            </thead>
+            <tbody id="alertTable"></tbody>
+        </table>
+    </div>
+
+    <!-- EXPORT -->
+    <div class="export-section">
+        <button onclick="exportDashboardImage()" class="export-btn">
+            Download Dashboard Report
+        </button>
+    </div>
+
+</div>
+
+<!-- ✅ DATA (MUST BE BEFORE JS FILES) -->
+<script>
+    const regionData = {{ regionData | tojson }};
+    const transportData = {{ transportData | tojson }};
+    const weatherData = {{ weatherData | tojson }};
+    const trafficData = {{ trafficData | tojson }};
+    const demandData = {{ demandData | tojson }};
+    const stockData = {{ stockData | tojson }};
+    const valueData = {{ valueData | tojson }};
+    const fuelData = {{ fuelData | tojson }};
+
+    // KPI + alerts
+    window.total_predictions = {{ total_predictions }};
+    window.total_suppliers = {{ total_suppliers }};
+    window.high_risk = {{ high_risk }};
+    window.medium_risk = {{ medium_risk }};
+    window.low_risk = {{ low_risk }};
+    window.avg_delay = {{ avg_delay }};
+    window.total_value = {{ total_value }};
+    window.avg_fuel = {{ avg_fuel }};
+    window.alerts = {{ alerts | tojson }};
+</script>
+
+<!-- ✅ LOAD JS IN CORRECT ORDER -->
+<script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+{% endblock %}

@@ -1,0 +1,659 @@
+/* GLOBAL DARK THEME */
+body {
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #020617;
+    border-bottom: 1px solid #1e293b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 25px;
+}
+
+/* LOGO */
+.navbar .logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #38bdf8;
+    letter-spacing: 0.5px;
+}
+
+/* RIGHT SECTION (ALL ITEMS) */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* NAV LINKS */
+.navbar a {
+    text-decoration: none;
+    color: #cbd5f5;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14.5px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+/* HOVER */
+.navbar a:hover {
+    background: #1e293b;
+    color: #ffffff;
+}
+
+/* ACTIVE LINK */
+.navbar a.active {
+    background: #2563eb;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* USER TEXT */
+.nav-right .user {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+    background: #ef4444;
+    padding: 6px 14px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* LOGOUT HOVER */
+.navbar .logout-btn:hover {
+    background: #dc2626;
+    color: white;
+}
+
+/* FLASH */
+.flash {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.flash.success {
+    background: #16a34a;
+}
+
+.flash.danger {
+    background: #dc2626;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    padding: 20px;
+}
+
+/* KPI CARDS */
+.kpi-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.kpi-card {
+    background: #020617;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #1e293b;
+}
+
+.kpi-card h3 {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.kpi-card p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+/* CHARTS */
+.chart-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.chart-card {
+    background: #020617;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #1e293b;
+}
+
+.chart-card.large {
+    grid-column: span 1;
+}
+
+.chart-card h3 {
+    margin-bottom: 10px;
+}
+
+/* EXPORT BUTTON */
+.export-section {
+    text-align: right;
+}
+
+.export-btn {
+    background: #22c55e;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.export-btn:hover {
+    background: #16a34a;
+}
+
+/* LOGIN PAGE */
+.login-body {
+    background: #020617;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: #0f172a;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #1e293b;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 6px;
+    color: white;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background: #2563eb;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+/* PREDICT PAGE */
+.predict-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* FORM CARD */
+.form-card {
+    background: #020617;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 1px solid #1e293b;
+}
+
+/* GRID FIX (IMPORTANT) */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 30px;
+}
+
+/* INPUT GROUP */
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* LABEL */
+.input-group label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #cbd5f5;
+}
+
+/* INPUT + SELECT FIX */
+.input-group input,
+.input-group select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #334155;
+    background: #0f172a;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+}
+
+/* SMALL SELECT */
+.input-group select {
+    appearance: none;
+    cursor: pointer;
+}
+
+/* FOCUS EFFECT */
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+/* BUTTON */
+.predict-btn,
+.upload-btn {
+    margin-top: 20px;
+    padding: 12px;
+    background: #22c55e;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    width: 200px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.predict-btn:hover, 
+.upload-btn:hover {
+    background: #16a34a;
+}
+
+/* RESULT PAGE */
+/* ============================= */
+/* 🔥 RESULT PAGE (FINAL CLEAN) */
+/* ============================= */
+
+.result-container {
+    max-width: 880px;
+    margin: 5px auto;
+    padding: 0 16px;
+}
+
+/* TITLE */
+.result-container h2 {
+    margin-bottom: 20px;
+}
+
+/* CARD */
+.result-card {
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 14px;
+    padding: 28px;
+    text-align: center;
+}
+
+/* ============================= */
+/* 🔥 RISK BADGE (FIXED TEXT COLOR) */
+/* ============================= */
+
+.result-container .risk-badge {
+    padding: 8px 22px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 15px;
+    display: inline-block;
+}
+
+/* HIGH */
+.result-container .risk-high {
+    background: #ef4444;
+    color: white;
+}
+
+/* MEDIUM */
+.result-container .risk-medium {
+    background: #f59e0b;
+    color: #111827;
+}
+
+/* LOW */
+.result-container .risk-low {
+    background: #22c55e;
+    color: #022c22;
+}
+
+/* ============================= */
+/* 🔥 CONFIDENCE */
+/* ============================= */
+
+.confidence-box {
+    margin-top: 22px;
+    padding: 18px;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+}
+
+.confidence-box h4 {
+    margin-bottom: 6px;
+}
+
+.confidence-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: #22c55e;
+}
+
+/* ============================= */
+/* 🔥 MESSAGE */
+/* ============================= */
+
+.risk-message {
+    margin-top: 16px;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* ============================= */
+/* 🔥 EXPLANATION */
+/* ============================= */
+
+.explanation-box {
+    margin-top: 22px;
+    padding: 18px;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.explanation-box h4 {
+    margin-bottom: 10px;
+}
+
+.explanation-box ul {
+    padding-left: 18px;
+}
+
+.explanation-box li {
+    margin-bottom: 6px;
+}
+
+/* ============================= */
+/* 🔥 BUTTONS */
+/* ============================= */
+
+.result-actions {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* PRIMARY */
+.btn-primary {
+    background: #2563eb;
+    padding: 10px 18px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+/* SECONDARY */
+.btn-secondary {
+    background: #475569;
+    padding: 10px 18px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.btn-secondary:hover {
+    background: #334155;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.history-container {
+    max-width: 1200px;
+    margin: 15px auto;
+    padding: 0 16px;
+}
+
+/* TITLE */
+.history-container h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #e2e8f0;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   CONTROLS
+========================= */
+.history-controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* SEARCH */
+.history-controls input {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+    background: #020617;
+    color: #cbd5f5;
+    outline: none;
+    min-width: 220px;
+}
+
+/* FILTER */
+.history-controls select {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+    background: #020617;
+    color: #cbd5f5;
+    outline: none;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.export-btn {
+    background: #22c55e;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+.export-btn:hover {
+    background: #16a34a;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+
+/* DELETE BUTTON BASE */
+.delete-btn.icon {
+    background: #ef4444;       /* red */
+    border: none;
+    border-radius: 6px;
+    padding: 8px 10px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+/* ICON */
+.delete-btn.icon i {
+    color: #ffffff;            /* white icon */
+    font-size: 14px;
+}
+
+/* HOVER */
+.delete-btn.icon:hover {
+    background: #dc2626;       /* darker red */
+    transform: scale(1.05);
+}
+
+/* CLICK EFFECT */
+.delete-btn.icon:active {
+    transform: scale(0.95);
+}
+
+/* =========================
+   TABLE CONTAINER
+========================= */
+.table-container {
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+    overflow: hidden;
+}
+
+/* =========================
+   TABLE
+========================= */
+#historyTable {
+    width: 100%;
+    border-collapse: collapse;
+    background: #020617;
+}
+
+/* HEADER */
+#historyTable thead {
+    background: #020617;
+}
+
+#historyTable th {
+    padding: 14px;
+    text-align: left;
+    font-size: 13px;
+    color: #94a3b8;
+    border-bottom: 1px solid #1e293b;
+}
+
+/* BODY */
+#historyTable td {
+    padding: 14px;
+    border-bottom: 1px solid #1e293b;
+    color: #e2e8f0;
+    font-size: 14px;
+}
+
+/* HOVER */
+#historyTable tbody tr:hover {
+    background: #0f172a;
+}
+
+/* RISK COLUMN */
+#historyTable th:nth-last-child(2),
+#historyTable td:nth-last-child(2) {
+    text-align: center;
+}
+
+/* ACTION COLUMN */
+#historyTable th:last-child,
+#historyTable td:last-child {
+    text-align: center;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+#historyTable td[colspan] {
+    text-align: center;
+    padding: 40px 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* =========================
+   RISK BADGES (SCOPED)
+========================= */
+.history-container .risk-badge {
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* HIGH */
+.history-container .risk-high {
+    color: #ef4444;
+}
+
+/* MEDIUM */
+.history-container .risk-medium {
+    color: #f59e0b;
+}
+
+/* LOW */
+.history-container .risk-low {
+    color: #22c55e;
+}
+
+/* =========================
+   CHECKBOX
+========================= */
+input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: #3b82f6;
+}

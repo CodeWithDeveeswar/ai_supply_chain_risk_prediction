@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="result-container">
+
+    <h2>Prediction Result</h2>
+
+    <!-- RESULT CARD -->
+    <div class="result-card">
+
+        <h3>Risk Level:</h3>
+
+        <div class="
+            risk-badge
+            {% if risk == 'High' %} risk-high
+            {% elif risk == 'Medium' %} risk-medium
+            {% else %} risk-low
+            {% endif %}
+        ">
+            {{ risk }}
+        </div>
+
+        <!-- CONFIDENCE -->
+        <div class="confidence-box">
+            <h4>Confidence</h4>
+            <p class="confidence-value">{{ confidence }}%</p>
+        </div>
+
+        <!-- MESSAGE -->
+        <p class="risk-message">
+            {% if risk == 'High' %}
+                High disruption risk detected. Immediate action required.
+            {% elif risk == 'Medium' %}
+                Moderate risk detected. Monitor and optimize operations.
+            {% else %}
+                Low risk. Supply chain is stable.
+            {% endif %}
+        </p>
+
+        <!-- EXPLANATION -->
+        <div class="explanation-box">
+            <h4>Why this prediction?</h4>
+            <ul>
+                {% for reason in explanation %}
+                    <li>{{ reason }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- ACTION BUTTONS -->
+    <div class="result-actions">
+        <a href="/predict" class="btn-primary">Predict Again</a>
+        <a href="/dashboard" class="btn-secondary">Go to Dashboard</a>
+    </div>
+
+</div>
+
+{% endblock %}
