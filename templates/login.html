@@ -11,34 +11,43 @@
 
 <body class="login-body">
 
-    <div class="login-container">
+    <div class="login-wrapper">
 
-        <form method="POST" class="login-form">
-            <h2>Admin Login</h2>
+        <!-- 🔥 HEADER (NEW) -->
+        <div class="login-header">
+            <h1>AI Supply Chain Risk Prediction System</h1>
+            <p>Smart Risk Detection & Analytics Platform</p>
+        </div>
 
-            <!-- Flash Messages -->
-            {% with messages = get_flashed_messages(with_categories=true) %}
-                {% if messages %}
-                    {% for category, message in messages %}
-                        <div class="flash {{ category }}">
-                            {{ message }}
-                        </div>
-                    {% endfor %}
-                {% endif %}
-            {% endwith %}
+        <!-- FORM -->
+        <div class="login-container">
+            <form method="POST" class="login-form">
+                <h2>Admin Login</h2>
 
-            <div class="input-group">
-                <label>Username</label>
-                <input type="text" name="username" placeholder="Enter username" required>
-            </div>
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="flash {{ category }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
 
-            <div class="input-group">
-                <label>Password</label>
-                <input type="password" name="password" placeholder="Enter password" required>
-            </div>
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" name="username" placeholder="Enter username" required>
+                </div>
 
-            <button type="submit" class="login-btn">Login</button>
-        </form>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Enter password" required>
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+
+            </form>
+        </div>
 
     </div>
 

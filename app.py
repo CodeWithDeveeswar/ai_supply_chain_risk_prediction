@@ -4,8 +4,11 @@ from datetime import datetime
 from config import *
 from utils.excel_export import export_excel
 from utils.predictor import run_prediction
+from werkzeug.utils import secure_filename
+import os
 import subprocess
 import pandas as pd
+
 
 app = Flask(__name__)
 app.secret_key = SECRET_KEY
@@ -37,6 +40,7 @@ def login():
 
         if user:
             session["user"] = username
+            flash("Login successful!", "success") 
             return redirect("/dashboard")
         else:
             flash("Invalid username or password", "danger")
@@ -299,10 +303,21 @@ def predict():
 
         if file and file.filename != "":
 
-            if file.filename.endswith(".csv"):
-                df = pd.read_csv(file)
+            upload_folder = os.path.join(os.getcwd(), "uploads")
+
+            if not os.path.exists(upload_folder):
+                os.makedirs(upload_folder)
+
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            filename = f"{timestamp}_{secure_filename(file.filename)}"
+            file_path = os.path.join(upload_folder, filename)
+
+            file.save(file_path)
+
+            if filename.endswith(".csv"):
+                df = pd.read_csv(file_path)
             else:
-                df = pd.read_excel(file)
+                df = pd.read_excel(file_path)
 
             inserted = 0
 

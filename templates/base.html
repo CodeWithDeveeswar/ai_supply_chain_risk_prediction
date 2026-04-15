@@ -63,6 +63,33 @@
     <script src="{{ url_for('static', filename='js/export.js') }}"></script>
     <script src="{{ url_for('static', filename='js/history.js') }}"></script>
 
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const flashes = document.querySelectorAll(".flash");
+
+    flashes.forEach(flash => {
+
+        // show animation
+        flash.style.opacity = "1";
+        flash.style.transform = "translateY(0)";
+
+        // auto hide after 3 seconds
+        setTimeout(() => {
+            flash.style.opacity = "0";
+            flash.style.transform = "translateY(-10px)";
+
+            // remove from DOM after animation
+            setTimeout(() => {
+                flash.remove();
+            }, 400);
+
+        }, 3000);
+    });
+
+});
+</script>
+
 </body>
 
 </html>
