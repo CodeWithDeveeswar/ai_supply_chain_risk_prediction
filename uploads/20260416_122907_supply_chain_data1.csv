@@ -1,0 +1,26 @@
+date,supplier,region,transport,delay,weather,demand,inventory,traffic,port_delay,order_value,fuel_cost,risk
+2026-04-14 10:01,Alpha Logistics,0,0,3,0,1,80,0,0,1200,2.1,Low
+2026-04-14 10:05,Beta Supply Co,1,2,7,1,2,45,1,1,2500,2.9,Medium
+2026-04-14 10:10,Gamma Freight,2,3,12,2,2,20,2,1,4200,3.8,High
+2026-04-14 10:15,Delta Movers,3,0,5,0,1,60,0,0,1800,2.5,Low
+2026-04-14 10:20,Epsilon Transport,4,1,9,2,2,30,2,1,3500,3.3,High
+2026-04-14 10:25,Zeta Logistics,0,2,6,1,1,50,1,0,2200,2.7,Medium
+2026-04-14 10:30,Eta Cargo,1,0,2,0,0,90,0,0,900,1.9,Low
+2026-04-14 10:35,Theta Shipping,2,3,11,2,2,15,2,1,5000,4.1,High
+2026-04-14 10:40,Iota Express,3,1,4,0,1,70,0,0,1600,2.3,Low
+2026-04-14 10:45,Kappa Logistics,4,2,8,1,2,40,1,1,3000,3.0,Medium
+2026-04-14 10:50,Lambda Freight,0,0,13,2,2,10,2,1,4500,4.2,High
+2026-04-14 10:55,Mu Transport,1,1,6,1,1,55,1,0,2100,2.8,Medium
+2026-04-14 11:00,Nu Movers,2,3,3,0,0,85,0,0,1000,2.0,Low
+2026-04-14 11:05,Xi Cargo,3,2,10,2,2,25,2,1,3900,3.6,High
+2026-04-14 11:10,Omicron Logistics,4,0,5,0,1,65,0,0,1700,2.4,Low
+2026-04-14 11:15,Pi Supply Chain,0,1,7,1,2,45,1,1,2600,3.1,Medium
+2026-04-14 11:20,Rho Freight,1,2,14,2,2,12,2,1,5200,4.5,High
+2026-04-14 11:25,Sigma Logistics,2,0,4,0,1,75,0,0,1400,2.2,Low
+2026-04-14 11:30,Tau Transport,3,1,9,1,2,35,1,1,3100,3.2,Medium
+2026-04-14 11:35,Upsilon Movers,4,3,11,2,2,18,2,1,4700,4.0,High
+2026-04-14 11:40,Phoenix Logistics,0,0,2,0,0,95,0,0,800,1.8,Low
+2026-04-14 11:45,Atlas Supply,1,2,6,1,1,50,1,0,2300,2.9,Medium
+2026-04-14 11:50,Orion Freight,2,3,13,2,2,14,2,1,4800,4.3,High
+2026-04-14 11:55,Nova Logistics,3,0,3,0,0,88,0,0,1100,2.1,Low
+2026-04-14 12:00,Zenith Cargo,4,1,8,1,2,38,1,1,2900,3.0,Medium

@@ -235,29 +235,3 @@ table td {
     border-radius: 10px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-    .kpi-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .chart-row {
-        grid-template-columns: 1fr;
-    }
-
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-    .navbar {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .nav-center {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}

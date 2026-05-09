@@ -141,4 +141,4 @@ print(f"✔ Model              → {MODEL_PATH}")
 print(f"✔ Confusion Matrix   → {cm_path}")
 print(f"✔ Feature Importance → {fi_path}")
 
-print("\n🔥 Training Completed Successfully\n")
+print("\n✅ Training Completed Successfully\n")

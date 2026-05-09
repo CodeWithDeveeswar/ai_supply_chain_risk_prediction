@@ -1,0 +1,11 @@
+date,supplier,region,transport,delay,weather,demand,inventory,traffic,port_delay,order_value,fuel_cost,risk
+2026-04-01,Supplier A,0,0,2,0,1,80,0,0,1000,1.4,Low
+2026-04-01,Supplier B,1,1,6,1,2,40,1,1,2000,2.2,Medium
+2026-04-01,Supplier C,2,2,10,2,2,10,2,1,3000,3.5,High
+2026-04-02,Supplier D,0,0,3,0,0,70,0,0,1500,1.6,Low
+2026-04-02,Supplier E,3,3,8,2,1,30,2,1,2500,3.0,High
+2026-04-02,Supplier F,4,2,5,1,1,50,1,0,1800,2.3,Medium
+2026-04-03,Supplier G,1,1,7,2,2,20,2,1,2200,3.1,High
+2026-04-03,Supplier H,2,0,1,0,0,90,0,0,900,1.2,Low
+2026-04-03,Supplier I,0,3,4,1,1,60,1,0,1700,2.0,Medium
+2026-04-03,Supplier J,3,2,9,2,2,15,2,1,2800,3.4,High
