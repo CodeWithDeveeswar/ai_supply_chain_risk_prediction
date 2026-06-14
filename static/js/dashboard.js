@@ -54,7 +54,7 @@ function getWeather(w) {
 
 // ================= AUTO REFRESH =================
 function refreshDashboard() {
-    fetch("/dashboard-data")   // 🔥 NEW API ROUTE REQUIRED
+    fetch("/dashboard-data")   
         .then(res => res.json())
         .then(data => {
 
@@ -72,10 +72,6 @@ function refreshDashboard() {
             window.alerts = data.alerts;
             loadAlerts();
 
-            // ⚠️ IMPORTANT:
-            // If you want charts auto-update → destroy & recreate charts
-            // (optional - only if needed)
-
         })
         .catch(err => console.error("Dashboard refresh error:", err));
 }
@@ -85,6 +81,6 @@ function refreshDashboard() {
 document.addEventListener("DOMContentLoaded", () => {
     loadAlerts();
 
-    // 🔥 AUTO REFRESH EVERY 10 SECONDS
+    // AUTO REFRESH EVERY 10 SECONDS
     setInterval(refreshDashboard, 10000);
 });

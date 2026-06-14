@@ -1,4 +1,3 @@
-// REGION DISTRIBUTION
 const ctx = document.getElementById('regionChart').getContext('2d');
 
 new Chart(ctx, {
@@ -53,7 +52,6 @@ new Chart(ctx, {
         }
     }
 });
-
 
 const ctx2 = document.getElementById('transportChart').getContext('2d');
 
@@ -167,7 +165,6 @@ new Chart(ctx3, {
     }
 });
 
-// TRAFFIC
 const ctx4 = document.getElementById('trafficChart').getContext('2d');
 
 new Chart(ctx4, {
@@ -231,8 +228,6 @@ new Chart(ctx4, {
     }
 });
 
-
-// DEMAND
 const ctx5 = document.getElementById('demandChart').getContext('2d');
 
 new Chart(ctx5, {
@@ -284,8 +279,6 @@ new Chart(ctx5, {
     }
 });
 
-
-// STOCK
 const ctx6 = document.getElementById('stockChart').getContext('2d');
 
 new Chart(ctx6, {
@@ -355,8 +348,6 @@ new Chart(ctx6, {
     }
 });
 
-
-// ORDER VALUE TREND
 const ctx8 = document.getElementById('valueChart').getContext('2d');
 
 new Chart(ctx8, {
@@ -433,8 +424,6 @@ new Chart(ctx8, {
 });
 
 const ctx7 = document.getElementById('fuelChart').getContext('2d');
-
-// 🔥 Split data by risk
 const lowRisk = [];
 const mediumRisk = [];
 const highRisk = [];

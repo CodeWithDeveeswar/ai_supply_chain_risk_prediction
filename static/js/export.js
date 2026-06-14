@@ -16,7 +16,7 @@ function exportDashboardImage() {
         backgroundColor: "#0f172a"
     }).then(canvas => {
 
-        // 🔥 UNIQUE FILE NAME
+        // UNIQUE FILE NAME
         const now = new Date();
         const timestamp = now.toISOString().replace(/[:.]/g, "-");
         const filename = `dashboard_report_${timestamp}.png`;

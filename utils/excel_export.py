@@ -14,7 +14,7 @@ def export_excel(db_path):
     rows = cursor.fetchall()
     columns = [desc[0] for desc in cursor.description]
 
-    # 🔥 HUMAN READABLE MAPS
+    # HUMAN READABLE MAPS
     region_map = {
         0: "Asia", 1: "Europe", 2: "North America",
         3: "South America", 4: "Africa"
@@ -37,7 +37,7 @@ def export_excel(db_path):
     ws = wb.active
     ws.title = "Supply Chain Report"
 
-    # 🎨 HEADER STYLE
+    # HEADER STYLE
     header_fill = PatternFill(start_color="1E3A8A", fill_type="solid")
     header_font = Font(color="FFFFFF", bold=True)
 
@@ -46,7 +46,7 @@ def export_excel(db_path):
         top=Side(style='thin'), bottom=Side(style='thin')
     )
 
-    # ✅ CLEAN COLUMN NAMES
+    # CLEAN COLUMN NAMES
     clean_columns = [
         "ID", "Date", "Supplier", "Region", "Transport",
         "Delay (Days)", "Weather", "Demand",
@@ -67,7 +67,7 @@ def export_excel(db_path):
 
         row = list(row)
 
-        # 🔥 CONVERT TO HUMAN READABLE
+        # CONVERT TO HUMAN READABLE
         row[3] = region_map.get(row[3], "Unknown")
         row[4] = transport_map.get(row[4], "Unknown")
         row[6] = weather_map.get(row[6], "Unknown")
@@ -80,7 +80,7 @@ def export_excel(db_path):
             cell.alignment = Alignment(horizontal="center")
             cell.border = border
 
-            # 🎨 RISK COLOR
+            # RISK COLOR
             if columns[col_num - 1] == "risk":
                 if value == "High":
                     cell.fill = PatternFill(start_color="FECACA", fill_type="solid")

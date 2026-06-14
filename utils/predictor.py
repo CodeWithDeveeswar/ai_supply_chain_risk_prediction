@@ -26,7 +26,7 @@ def generate_explanation(data, risk):
     order_value = float(data.get("order_value", 0))
     port_delay = int(data.get("port_delay", 0))
 
-    # 🔥 RULE-BASED EXPLANATION
+    # RULE-BASED EXPLANATION
     if delay > 7:
         reasons.append("High delivery delay")
 
@@ -68,24 +68,24 @@ def run_prediction(data):
             int(data.get("port_delay", 0))
         ]]
 
-        # 🔥 PREDICTION
+        # PREDICTION
         prediction = model.predict(features)[0]
 
-        # 🔥 CONFIDENCE
+        # CONFIDENCE
         probs = model.predict_proba(features)[0]
         confidence = round(max(probs) * 100, 2)
 
-        # 🔥 FUEL COST
+        # FUEL COST
         fuel_cost = calculate_fuel_cost(features[0][0])
 
-        # 🔥 EXPLANATION
+        # EXPLANATION
         explanation = generate_explanation(data, prediction)
 
         return {
             "risk": prediction,
             "confidence": confidence,
             "fuel_cost": fuel_cost,
-            "explanation": explanation   # 🔥 NEW
+            "explanation": explanation   
         }
 
     except Exception as e:

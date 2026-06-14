@@ -22,7 +22,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* RIGHT SECTION (ALL ITEMS) */
+/* RIGHT SECTION */
 .nav-right {
     display: flex;
     align-items: center;
@@ -166,8 +166,7 @@ body {
     background: #16a34a;
 }
 
-/* ================= LOGIN PAGE (FINAL CLEAN) ================= */
-
+/* LOGIN PAGE */
 .login-body {
     margin: 0;
     padding: 0;
@@ -181,18 +180,18 @@ body {
     align-items: center;
 }
 
-/* ===== WRAPPER (MAIN CENTER CONTROL) ===== */
+/* WRAPPER */
 .login-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    gap: 20px; /* spacing between title and card */
+    gap: 20px; 
     width: 100%;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 .login-header {
     text-align: center;
 }
@@ -210,7 +209,7 @@ body {
     margin-top: 5px;
 }
 
-/* ===== CARD ===== */
+/* CARD */
 .login-container {
     background: rgba(15, 23, 42, 0.95);
     padding: 35px;
@@ -224,7 +223,7 @@ body {
         0 10px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* ===== FORM ===== */
+/* FORM */
 .login-form h2 {
     margin-bottom: 25px;
     color: #f1f5f9;
@@ -232,7 +231,7 @@ body {
     text-align: center;
 }
 
-/* ===== INPUT GROUP ===== */
+/* INPUT GROUP */
 .input-group {
     margin-bottom: 18px;
 }
@@ -258,14 +257,14 @@ body {
     transition: all 0.2s ease;
 }
 
-/* ===== INPUT FOCUS ===== */
+/* INPUT FOCUS */
 .input-group input:focus {
     border-color: #3b82f6;
     box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
     outline: none;
 }
 
-/* ===== BUTTON ===== */
+/* BUTTON */
 .login-btn {
     width: 100%;
     padding: 11px;
@@ -326,7 +325,7 @@ body {
     border: 1px solid #1e293b;
 }
 
-/* GRID FIX (IMPORTANT) */
+/* GRID FIX */
 .form-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -391,10 +390,6 @@ body {
 }
 
 /* RESULT PAGE */
-/* ============================= */
-/* 🔥 RESULT PAGE (FINAL CLEAN) */
-/* ============================= */
-
 .result-container {
     max-width: 880px;
     margin: 5px auto;
@@ -415,10 +410,7 @@ body {
     text-align: center;
 }
 
-/* ============================= */
-/* 🔥 RISK BADGE (FIXED TEXT COLOR) */
-/* ============================= */
-
+/* RISK BADGE */
 .result-container .risk-badge {
     padding: 8px 22px;
     border-radius: 999px;
@@ -445,10 +437,7 @@ body {
     color: #022c22;
 }
 
-/* ============================= */
-/* 🔥 CONFIDENCE */
-/* ============================= */
-
+/* CONFIDENCE */
 .confidence-box {
     margin-top: 22px;
     padding: 18px;
@@ -466,20 +455,14 @@ body {
     color: #22c55e;
 }
 
-/* ============================= */
-/* 🔥 MESSAGE */
-/* ============================= */
-
+/* MESSAGE */
 .risk-message {
     margin-top: 16px;
     color: #94a3b8;
     font-size: 14px;
 }
 
-/* ============================= */
-/* 🔥 EXPLANATION */
-/* ============================= */
-
+/* EXPLANATION */
 .explanation-box {
     margin-top: 22px;
     padding: 18px;
@@ -500,10 +483,7 @@ body {
     margin-bottom: 6px;
 }
 
-/* ============================= */
-/* 🔥 BUTTONS */
-/* ============================= */
-
+/* BUTTONS */
 .result-actions {
     margin-top: 28px;
     display: flex;
@@ -541,9 +521,7 @@ body {
     background: #334155;
 }
 
-/* =========================
-   CONTAINER
-========================= */
+/* CONTAINER */
 .history-container {
     max-width: 1200px;
     margin: 15px auto;
@@ -558,9 +536,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* =========================
-   CONTROLS
-========================= */
+/* CONTROLS */
 .history-controls {
     display: flex;
     gap: 12px;
@@ -590,9 +566,7 @@ body {
     outline: none;
 }
 
-/* =========================
-   BUTTONS
-========================= */
+/* BUTTONS */
 .export-btn {
     background: #22c55e;
     color: white;
@@ -626,7 +600,7 @@ body {
 
 /* DELETE BUTTON BASE */
 .delete-btn.icon {
-    background: #ef4444;       /* red */
+    background: #ef4444;       
     border: none;
     border-radius: 6px;
     padding: 8px 10px;
@@ -639,13 +613,13 @@ body {
 
 /* ICON */
 .delete-btn.icon i {
-    color: #ffffff;            /* white icon */
+    color: #ffffff;            
     font-size: 14px;
 }
 
 /* HOVER */
 .delete-btn.icon:hover {
-    background: #dc2626;       /* darker red */
+    background: #dc2626;       
     transform: scale(1.05);
 }
 
@@ -654,18 +628,14 @@ body {
     transform: scale(0.95);
 }
 
-/* =========================
-   TABLE CONTAINER
-========================= */
+/* TABLE CONTAINER */
 .table-container {
     border-radius: 12px;
     border: 1px solid #1e293b;
     overflow: hidden;
 }
 
-/* =========================
-   TABLE
-========================= */
+/* TABLE */
 #historyTable {
     width: 100%;
     border-collapse: collapse;
@@ -710,9 +680,7 @@ body {
     text-align: center;
 }
 
-/* =========================
-   EMPTY STATE
-========================= */
+/* EMPTY STATE */
 #historyTable td[colspan] {
     text-align: center;
     padding: 40px 0;
@@ -720,9 +688,7 @@ body {
     font-size: 14px;
 }
 
-/* =========================
-   RISK BADGES (SCOPED)
-========================= */
+/* RISK BADGES (SCOPED) */
 .history-container .risk-badge {
     padding: 5px 14px;
     border-radius: 999px;
@@ -746,9 +712,7 @@ body {
     color: #22c55e;
 }
 
-/* =========================
-   CHECKBOX
-========================= */
+/* CHECKBOX */
 input[type="checkbox"] {
     cursor: pointer;
     accent-color: #3b82f6;

@@ -109,7 +109,7 @@
         </div>
     </div>
 
-    <!-- 🔥 INSIGHT TABLE -->
+    <!-- INSIGHT TABLE -->
     <div class="chart-card">
         <h4>High Risk Suppliers</h4>
 
@@ -136,7 +136,7 @@
 
 </div>
 
-<!-- ✅ DATA (MUST BE BEFORE JS FILES) -->
+<!-- DATA (MUST BE BEFORE JS FILES) -->
 <script>
     const regionData = {{ regionData | tojson }};
     const transportData = {{ transportData | tojson }};
@@ -159,7 +159,7 @@
     window.alerts = {{ alerts | tojson }};
 </script>
 
-<!-- ✅ LOAD JS IN CORRECT ORDER -->
+<!-- LOAD JS IN CORRECT ORDER -->
 <script src="{{ url_for('static', filename='js/charts.js') }}"></script>
 <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
 

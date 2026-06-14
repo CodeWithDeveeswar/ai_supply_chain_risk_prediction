@@ -1,11 +1,11 @@
 import sqlite3
 import os
 
-# 🔥 ensure database folder exists
+# ensure database folder exists
 if not os.path.exists("database"):
     os.makedirs("database")
 
-# 🔥 connect database
+# connect database
 conn = sqlite3.connect("database/database.db")
 cursor = conn.cursor()
 

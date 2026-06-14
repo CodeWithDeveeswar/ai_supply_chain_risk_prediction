@@ -32,7 +32,7 @@ function applyFilters() {
     rows.forEach(row => {
         const riskCell = row.querySelector(".risk-badge");
 
-        // 🔥 skip empty "no data" row
+        // skip empty "no data" row
         if (!riskCell) {
             row.style.display = "none";
             return;
@@ -52,7 +52,7 @@ function applyFilters() {
         }
     });
 
-    // 🔥 HANDLE EMPTY RESULT (VERY IMPORTANT)
+    // HANDLE EMPTY RESULT (VERY IMPORTANT)
     const tbody = document.querySelector("#historyTable tbody");
 
     let emptyRow = document.getElementById("noDataRow");
