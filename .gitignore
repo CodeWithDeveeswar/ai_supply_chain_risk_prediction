@@ -8,5 +8,5 @@ __pycache__/
 # Trained ML model
 model/risk_model.pkl
 
-# Optional: Ignore all pickle models
-# *.pkl
+# Training Reports
+model/reports/
