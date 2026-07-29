@@ -1,21 +1,36 @@
-````markdown
 # 🚀 AI-Based Supply Chain Risk Prediction System
 
 An AI-powered web application that predicts supply chain risk levels using a **Random Forest** machine learning model. The system enables administrators to analyze supply chain data, generate predictions, visualize insights through an interactive dashboard, and export reports.
 
 ---
 
+## 📑 Table of Contents
+
+- [Features](#-features)
+- [Technologies Used](#️-technologies-used)
+- [Project Structure](#-project-structure)
+- [Installation](#️-installation)
+- [Run the Application](#️-run-the-application)
+- [Machine Learning](#-machine-learning)
+- [Future Enhancements](#-future-enhancements)
+- [Author](#-author)
+- [License](#-license)
+
+---
+
 ## ✨ Features
 
-- 🔐 Admin Login
-- 🤖 AI-Based Risk Prediction
-- 📂 Manual Data Entry & CSV Upload
-- 📊 Interactive Dashboard with Charts
-- 📜 Prediction History
-- 🔍 Search & Filter Records
-- 📥 Excel Report Export
-- 🖼️ Dashboard Image Export
-- 💾 SQLite Database Storage
+| | |
+|---|---|
+| 🔐 | Admin Login |
+| 🤖 | AI-Based Risk Prediction |
+| 📂 | Manual Data Entry & CSV Upload |
+| 📊 | Interactive Dashboard with Charts |
+| 📜 | Prediction History |
+| 🔍 | Search & Filter Records |
+| 📥 | Excel Report Export |
+| 🖼️ | Dashboard Image Export |
+| 💾 | SQLite Database Storage |
 
 ---
 
@@ -83,19 +98,26 @@ ai_supply_chain_risk_prediction/
 
 ## ⚙️ Installation
 
-Clone the repository:
+**1. Clone the repository**
 
 ```bash
 git clone https://github.com/CodeWithDeveeswar/ai_supply_chain_risk_prediction.git
 ```
 
-Navigate to the project:
+**2. Navigate to the project directory**
 
 ```bash
 cd ai_supply_chain_risk_prediction
 ```
 
-Install dependencies:
+**3. (Optional) Create and activate a virtual environment**
+
+```bash
+python -m venv venv
+source venv/bin/activate      # On Windows: venv\Scripts\activate
+```
+
+**4. Install dependencies**
 
 ```bash
 pip install -r requirements.txt
@@ -105,25 +127,25 @@ pip install -r requirements.txt
 
 ## ▶️ Run the Application
 
-Initialize the database:
+**1. Initialize the database**
 
 ```bash
 python database/db_setup.py
 ```
 
-Train the model:
+**2. Train the model**
 
 ```bash
 python model/train_model.py
 ```
 
-Start the Flask server:
+**3. Start the Flask server**
 
 ```bash
 python app.py
 ```
 
-Open your browser:
+**4. Open your browser**
 
 ```
 http://127.0.0.1:5000
@@ -133,37 +155,32 @@ http://127.0.0.1:5000
 
 ## 📊 Machine Learning
 
-- **Algorithm:** Random Forest Classifier
-- **Prediction Classes:** Low, Medium, High Risk
-- **Evaluation Metrics:**
-  - Accuracy
-  - Balanced Accuracy
-  - Classification Report
-  - Confusion Matrix
-  - Feature Importance
+| Detail | Description |
+|---|---|
+| **Algorithm** | Random Forest Classifier |
+| **Prediction Classes** | Low, Medium, High Risk |
+| **Evaluation Metrics** | Accuracy, Balanced Accuracy, Classification Report, Confusion Matrix, Feature Importance |
 
 ---
 
 ## 🚀 Future Enhancements
 
-- Multi-user Authentication
-- Cloud Database Integration
-- Live Supply Chain Data
-- REST API Support
-- Deep Learning Models
-- Email Notifications
+- [ ] Multi-user Authentication
+- [ ] Cloud Database Integration
+- [ ] Live Supply Chain Data Feeds
+- [ ] REST API Support
+- [ ] Deep Learning Models
+- [ ] Email Notifications
 
 ---
 
 ## 👨‍💻 Author
 
 **Deveeswar K**
-
 MCA Student
 
 ---
 
 ## 📄 License
 
-This project is developed for academic and educational purposes.
-````
+This project is developed for **academic and educational purposes**.
