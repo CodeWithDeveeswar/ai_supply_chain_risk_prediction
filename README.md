@@ -1,5 +1,10 @@
 # 🚀 AI-Based Supply Chain Risk Prediction System
 
+[![Python](https://img.shields.io/badge/Python-3.10.11-blue.svg)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-2.x-black.svg)](https://flask.palletsprojects.com/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-RandomForest-orange.svg)](https://scikit-learn.org/)
+[![License](https://img.shields.io/badge/License-Academic-lightgrey.svg)](#-license)
+
 An AI-powered web application that predicts supply chain risk levels using a **Random Forest** machine learning model. The system enables administrators to analyze supply chain data, generate predictions, visualize insights through an interactive dashboard, and export reports.
 
 ---
@@ -7,6 +12,7 @@ An AI-powered web application that predicts supply chain risk levels using a **R
 ## 📑 Table of Contents
 
 - [Features](#-features)
+- [Requirements](#-requirements)
 - [Technologies Used](#️-technologies-used)
 - [Project Structure](#-project-structure)
 - [Installation](#️-installation)
@@ -31,6 +37,16 @@ An AI-powered web application that predicts supply chain risk levels using a **R
 | 📥 | Excel Report Export |
 | 🖼️ | Dashboard Image Export |
 | 💾 | SQLite Database Storage |
+
+---
+
+## ✅ Requirements
+
+| Requirement | Version |
+|---|---|
+| Python | `3.10.11` |
+
+> 💡 Make sure the correct Python version is installed and active (`python --version`) before creating your virtual environment.
 
 ---
 
