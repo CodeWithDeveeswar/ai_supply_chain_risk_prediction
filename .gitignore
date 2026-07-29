@@ -1,6 +1,12 @@
+# Python cache
 __pycache__/
-*.pyc
-.env
+*.py[cod]
+
+# VS Code
 .vscode/
 
+# Trained ML model
 model/risk_model.pkl
+
+# Optional: Ignore all pickle models
+# *.pkl
