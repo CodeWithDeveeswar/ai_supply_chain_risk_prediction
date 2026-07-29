@@ -23,17 +23,17 @@ function exportDashboardImage() {
 
         const imageData = canvas.toDataURL("image/png");
 
-        // =========================
+        // =====================
         // 1. DOWNLOAD (BROWSER)
-        // =========================
+        // =====================
         const link = document.createElement("a");
         link.download = filename;
         link.href = imageData;
         link.click();
 
-        // =========================
+        // ==============================
         // 2. SAVE TO DOWNLOADS (BACKEND)
-        // =========================
+        // ==============================
         fetch("/save-dashboard-image", {
             method: "POST",
             headers: {

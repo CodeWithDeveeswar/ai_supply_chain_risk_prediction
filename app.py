@@ -126,16 +126,20 @@ def dashboard():
 
     # ================= STOCK =================
     stockData = {
-        "Sufficient":{"Low":0,"Medium":0,"High":0},
-        "Low":{"Low":0,"Medium":0,"High":0},
-        "Out":{"Low":0,"Medium":0,"High":0}
+        "Sufficient": {"Low": 0, "Medium": 0, "High": 0},
+        "Low": {"Low": 0, "Medium": 0, "High": 0},
+        "Out": {"Low": 0, "Medium": 0, "High": 0}
     }
 
     cursor.execute("SELECT inventory, risk FROM predictions")
-    for inv,risk in cursor.fetchall():
-        if inv > 50:
+
+    for inv, risk in cursor.fetchall():
+
+        inv = int(inv)
+
+        if inv >= 1000:
             stockData["Sufficient"][risk] += 1
-        elif inv > 20:
+        elif inv >= 300:
             stockData["Low"][risk] += 1
         else:
             stockData["Out"][risk] += 1

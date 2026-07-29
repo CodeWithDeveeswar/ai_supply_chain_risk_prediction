@@ -94,10 +94,24 @@ def export_excel(db_path):
         max_length = max(len(str(cell.value)) if cell.value else 0 for cell in col)
         ws.column_dimensions[col[0].column_letter].width = max_length + 4
 
-    downloads_path = os.path.join(os.path.expanduser(""), "Downloads")
+    
+    # ==============================
+    # 1. SAVE TO DOWNLOADS (BACKEND)
+    # ==============================
+    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    exports_path = os.path.join(project_root, "Downloads")
+    os.makedirs(exports_path, exist_ok=True)
     filename = f"supply_chain_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx"
-    file_path = os.path.join(downloads_path, filename)
+    file_path = os.path.join(exports_path, filename)
     wb.save(file_path)
+    print(f"Excel saved at: {file_path}")
     conn.close()
 
-    return send_file(file_path, as_attachment=True)
+    # =====================
+    # 2. DOWNLOAD (BROWSER)
+    # =====================
+    return send_file(
+        file_path,
+        as_attachment=True,
+        download_name=filename
+    )
