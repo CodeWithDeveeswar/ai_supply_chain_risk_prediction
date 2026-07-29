@@ -1,53 +1,51 @@
 ````markdown
 # 🚀 AI-Based Supply Chain Risk Prediction System
 
-Developed an AI-powered web application to predict supply chain risks using a Random Forest machine learning model. Implemented manual data entry and CSV upload for bulk risk prediction, classifying results into Low, Medium, and High risk levels with confidence scores. Built an interactive dashboard featuring KPIs, charts, prediction history, search, filtering, and export options (Excel and dashboard image). Stored prediction data in SQLite and developed the application using Flask, Python, HTML, CSS, JavaScript, Bootstrap, Pandas, Scikit-learn, Chart.js, and SQLite.
+An AI-powered web application that predicts supply chain risk levels using a **Random Forest** machine learning model. The system enables administrators to analyze supply chain data, generate predictions, visualize insights through an interactive dashboard, and export reports.
 
 ---
 
 ## ✨ Features
 
 - 🔐 Admin Login
-- 📊 Interactive Dashboard
 - 🤖 AI-Based Risk Prediction
-- 📂 Manual Data Entry
-- 📄 CSV Upload Prediction
-- 📈 Prediction Confidence Score
-- 📉 Real-Time Charts & Analytics
+- 📂 Manual Data Entry & CSV Upload
+- 📊 Interactive Dashboard with Charts
 - 📜 Prediction History
-- 📥 Export Excel Reports
-- 🖼 Export Dashboard as Image
+- 🔍 Search & Filter Records
+- 📥 Excel Report Export
+- 🖼️ Dashboard Image Export
 - 💾 SQLite Database Storage
 
 ---
 
-## 🛠 Technologies Used
+## 🛠️ Technologies Used
 
-### Frontend
+**Frontend**
 - HTML5
 - CSS3
 - JavaScript
 - Bootstrap
 - Chart.js
 
-### Backend
+**Backend**
 - Python
 - Flask
 
-### Machine Learning
+**Machine Learning**
 - Scikit-learn
 - Pandas
 - NumPy
 - Joblib
 
-### Database
+**Database**
 - SQLite
 
 ---
 
 ## 📂 Project Structure
 
-```
+```text
 ai_supply_chain_risk_prediction/
 │
 ├── app.py
@@ -85,19 +83,19 @@ ai_supply_chain_risk_prediction/
 
 ## ⚙️ Installation
 
-### Clone Repository
+Clone the repository:
 
 ```bash
 git clone https://github.com/CodeWithDeveeswar/ai_supply_chain_risk_prediction.git
 ```
 
-### Open Project
+Navigate to the project:
 
 ```bash
-cd ai-supply-chain-risk-prediction
+cd ai_supply_chain_risk_prediction
 ```
 
-### Install Dependencies
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -105,30 +103,21 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Run Database Setup
+## ▶️ Run the Application
+
+Initialize the database:
 
 ```bash
 python database/db_setup.py
 ```
 
----
-
-## 🧠 Train Machine Learning Model
+Train the model:
 
 ```bash
 python model/train_model.py
 ```
 
-The training process generates:
-
-- risk_model.pkl
-- Confusion Matrix
-- Feature Importance Graph
-- Model Performance Report
-
----
-
-## ▶️ Run Application
+Start the Flask server:
 
 ```bash
 python app.py
@@ -142,116 +131,27 @@ http://127.0.0.1:5000
 
 ---
 
-## 🔑 Default Admin Login
+## 📊 Machine Learning
 
-| Username | Password |
-|----------|----------|
-| admin | admin123 |
-
----
-
-## 📊 Machine Learning Model
-
-Algorithm Used:
-
-- Random Forest Classifier
-
-Model Evaluation:
-
-- Accuracy
-- Balanced Accuracy
-- Classification Report
-- Confusion Matrix
-- Feature Importance
-- Prediction Confidence Score
-
----
-
-## 📈 Dashboard
-
-The dashboard includes:
-
-- Total Predictions
-- Risk Distribution
-- Region Distribution
-- Transport Mode Analysis
-- Weather Impact
-- Demand Analysis
-- Fuel Cost Analysis
-- Traffic vs Delay
-- High Risk Suppliers
-- Order Value Trend
-
----
-
-## 📂 Prediction Input
-
-The system accepts:
-
-- Supplier Name
-- Region
-- Transport Mode
-- Delay
-- Weather
-- Demand
-- Inventory
-- Traffic
-- Port Delay
-- Order Value
-- Fuel Cost
-
----
-
-## 📤 Export Features
-
-- Excel Report Export
-- Dashboard Image Export
-- CSV Upload Backup
-
----
-
-## 📸 Screenshots
-
-- Login Page
-  ![Login](screenshots/Login.png)
-- Dashboard
-- Prediction Form
-- Prediction Result
-- Prediction History
-- Model Performance Reports
-
----
-
-## 📁 Reports Generated
-
-- Confusion Matrix
-- Feature Importance
-- Classification Report
-- Prediction History
-- Dashboard Report
-
----
-
-## 🔒 Security Features
-
-- Admin Authentication
-- Server-side Validation
-- Secure Database Storage
-- Protected Routes
-- Flash Messages
-- Input Validation
+- **Algorithm:** Random Forest Classifier
+- **Prediction Classes:** Low, Medium, High Risk
+- **Evaluation Metrics:**
+  - Accuracy
+  - Balanced Accuracy
+  - Classification Report
+  - Confusion Matrix
+  - Feature Importance
 
 ---
 
 ## 🚀 Future Enhancements
 
-- Multiple User Roles
-- Email Notifications
+- Multi-user Authentication
 - Cloud Database Integration
-- Live API Data Integration
-- Deep Learning Models
-- Mobile Responsive Dashboard
+- Live Supply Chain Data
 - REST API Support
+- Deep Learning Models
+- Email Notifications
 
 ---
 
@@ -261,11 +161,9 @@ The system accepts:
 
 MCA Student
 
-AI-Based Supply Chain Risk Prediction System
-
 ---
 
 ## 📄 License
 
-This project is developed for academic and learning purposes.
+This project is developed for academic and educational purposes.
 ````
