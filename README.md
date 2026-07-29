@@ -213,7 +213,7 @@ The system accepts:
 ## 📸 Screenshots
 
 - Login Page
-<img src="screenshots/login.png" width="800">
+  ![Login](screenshots/Login.png)
 - Dashboard
 - Prediction Form
 - Prediction Result
