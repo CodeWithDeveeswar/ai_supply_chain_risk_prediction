@@ -2,9 +2,7 @@ import joblib
 import os
 
 # ---------------- LOAD MODEL ----------------
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-MODEL_PATH = os.path.join(BASE_DIR, "model", "risk_model.pkl")
+MODEL_PATH = os.path.join("model", "risk_model.pkl")
 
 if not os.path.exists(MODEL_PATH):
     raise FileNotFoundError("❌ Model not found. Train the model first.")

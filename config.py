@@ -2,7 +2,7 @@ id="config_file"
 import os
 
 # ---------------- BASIC CONFIG ----------------
-SECRET_KEY = os.environ.get("SECRET_KEY", "secret123")
+SECRET_KEY = "secret123"
 
 # ---------------- DATABASE ----------------
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
