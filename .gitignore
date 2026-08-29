@@ -5,8 +5,5 @@ __pycache__/
 # VS Code
 .vscode/
 
-# Trained ML model
-model/risk_model.pkl
-
 # Training Reports
 model/reports/
