@@ -192,8 +192,7 @@ http://127.0.0.1:5000
 
 ## 👨‍💻 Author
 
-**Deveeswar K**
-MCA Student
+**CodeWithDeveeswar**
 
 ---
 
