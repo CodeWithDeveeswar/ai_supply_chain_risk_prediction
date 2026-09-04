@@ -5,5 +5,10 @@ __pycache__/
 # VS Code
 .vscode/
 
+# Virtual environment
+venv/
+.venv/
+env/
+
 # Training Reports
 model/reports/
